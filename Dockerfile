@@ -34,7 +34,8 @@ RUN pacman -Syu --noconfirm php-apache php-gd
 WORKDIR /srv/http
 
 RUN \
-    curl -s https://wordpress.org/latest.tar.gz | tar xz --owner=33 --group=33 --strip-components=1 && \
+    curl -s https://wordpress.org/latest.tar.gz | tar xz --strip-components=1 && \
+    chown -R http:http /srv/http && \
     sed -i 's/LoadModule mpm_event_module/#LoadModule mpm_event_module/g' /etc/httpd/conf/httpd.conf && \
     sed -i 's/#LoadModule mpm_prefork_module/LoadModule mpm_prefork_module/g' /etc/httpd/conf/httpd.conf && \
     sed -i 's/\/var\/log\/httpd\/error_log/\/dev\/stderr/g' /etc/httpd/conf/httpd.conf && \
