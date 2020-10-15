@@ -45,7 +45,6 @@ RUN \
     sed -i "s/;extension=pdo_mysql/extension=pdo_mysql/g" /etc/php/php.ini && \
     sed -i "s/;extension=mysqli/extension=mysqli/g" /etc/php/php.ini && \
     sed -i "s/;extension=gd/extension=gd/g" /etc/php/php.ini
-
     
 EXPOSE 80
 

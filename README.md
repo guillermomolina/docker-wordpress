@@ -1,2 +1,2 @@
 # docker-wordpress
-A docker with wordpress based on archlinux with apache
+A container with wordpress based on archlinux with apache
