@@ -39,7 +39,7 @@ services:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_PASSWORD=password
       - MYSQL_DATABASE=wordpress
-      - MYSQL_USER=wordpress
+      - MYSQL_USER=username
 
   application:
     image: guillermomolina/wordpress
